@@ -1,0 +1,9 @@
+These are conf files and built files for Mongoose web server
+
+Mongooose 5.5
+Raspberry Pi 2
+Jessie Lite
+
+copy down the mongoose.sh file
+run with -full to also grab mongoose 5.5 tar and compile
+or run with no options to simply use these compiled versions
