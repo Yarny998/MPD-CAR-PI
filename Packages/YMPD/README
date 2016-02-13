@@ -1,0 +1,7 @@
+This is a script to download and install ympd
+
+Raspberry Pi 2
+Jessie Lite
+
+copy down the ympd.sh file
+run as root with no options
