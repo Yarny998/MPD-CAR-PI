@@ -17,7 +17,7 @@ aptitude install mpd mpc
 cd /tmp
 
 #Get the config file and service file
-wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/mpd/mpd.conf
+wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/MPD/mpd.conf
 
 # Install config files
 install -Dm644  mpd.conf /etc/mpd.conf
