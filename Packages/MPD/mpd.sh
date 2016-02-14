@@ -26,5 +26,8 @@ install -Dm644  mpd.conf /etc/mpd.conf
 systemctl restart mpd.service
 systemctl status mpd.service
 
+#Update the database
+mpc update
+
 #Cleanup
 rm mpd.conf
