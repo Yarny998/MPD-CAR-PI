@@ -55,7 +55,7 @@ wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/M
 # Install files
 cd /tmp
 install -D -m644 mongoose.conf "/etc/mongoose/mongoose.conf"
-install -D -m644 mongoose.service "/etc/systemd/service"
+install -D -m644 mongoose.service "/etc/systemd/system/mongoose.service"
 install -D -m644 LICENSE "/usr/share/licenses/mongoose/LICENSE"
 install -D -m755 libmongoose.so "/usr/lib/libmongoose.so"
 install -D -m644 mongoose.h "/usr/include/mongoose.h"
