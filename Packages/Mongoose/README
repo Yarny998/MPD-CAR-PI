@@ -1,9 +1,15 @@
-These are conf files and built files for Mongoose web server
+Cover Art For Remote Players
+    Uses Mongoose to share the files. Files should be in album folders and called folder.jpg
 
-Mongooose 5.5
-Raspberry Pi 2
-Jessie Lite
+    To use
+        In you player, mpdroid for example, point to the ip address and port 8080
 
-copy down the mongoose.sh file
-run with -full to also grab mongoose 5.5 tar and compile
-or run with no options to simply use these compiled versions
+Install
+    copy down the setup.sh file
+        wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Mongoose/setup.sh
+    
+    run with -full to also grab mongoose 5.5 tar and compile
+        ./setup.sh -full
+        
+    or run with no options to simply use these compiled versions
+        ./setup.sh
