@@ -1,0 +1,25 @@
+Rotary Encoder for Volume Control
+    See http://www.iqaudio.com/downloads/IQaudIO.pdf
+    Refer to page 31 for PI pins
+    Refer page 35 for rotary encoder installation
+
+
+Button control
+    The following uses a C program to control button presses from a button connected to GPIOs
+    There are 4 configurable commands
+    
+    Usage
+	      Press 1, 2 or 3 times within 1 second
+	          1 press = next song
+	          2 presses = previous song
+	          3 presses = toggle play/pause
+
+	          Hold down for more than 1 second
+	          Not yet defined, perhaps shutdown the system
+
+    Configuration
+        /etc/buttons.conf
+
+    Pins
+        The script assumes one side of the switch/button is connected on pin 17
+        The other side is connected on any of the GND pins
