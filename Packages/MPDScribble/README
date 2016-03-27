@@ -1,10 +1,14 @@
-Scrobbler
+LastFM Scrobbler
 
 MPDScribble page
 https://aur.archlinux.org/packages/mpdscribble/
 
 Hash your password to Last.FM
 
-Once finished installing, you must add your last.fm user and password to /etc/mpdscribble
+    Once finished installing, you must add your last.fm user and password to /etc/mpdscribble
 
     echo -n "password" | md5sum | cut -f 1 -d " "
+
+Check LAST.FM
+    You should see songs being added to your LastFm account once played. 
+    They need to be played completely for a full scrobble entry to be made.
