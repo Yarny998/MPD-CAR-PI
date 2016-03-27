@@ -11,9 +11,22 @@ pkgrel=1
 pkgpath="https://github.com/notandy/ympd/archive"
 pkgfile="master.zip"
 unzipdir="ympd-master"
+declare -a depends=("cmake" "libmpdclient-dev")
+
+echo "Installing $pkgname"
 
 #Dependencies
-aptitude install cmake libmpdclient-dev
+for deppkg in "${depends[@]}"
+do
+    PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $deppkg|grep "install ok installed")
+    echo Checking for package: $deppkg
+    if [ "" == "$PKG_OK" ]; then
+        echo Installing package: $deppkg
+        sptitude install $deppkg
+    else
+        echo Package already installed: $deppkg
+    fi
+done
 
 cd /tmp
 
@@ -33,7 +46,7 @@ wget https://raw.githubusercontent.com/notandy/ympd/master/contrib/ympd.service
 wget https://raw.githubusercontent.com/notandy/ympd/master/contrib/ympd.default
 
 #Change web port
-sed '/WEB_PORT=8080/c WEB_PORT=80' -i ympd.default
+sed 's/WEB_PORT=8080/WEB_PORT=80/' -i ympd.default
 
 # Install files
 install -Dm644  ympd.service /etc/systemd/system/ympd.service

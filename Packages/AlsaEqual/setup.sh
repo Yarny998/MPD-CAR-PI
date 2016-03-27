@@ -1,15 +1,28 @@
 #!/bin/bash
 #
-## Mongoose
+## Alsaequal setup script
 ## This is the full installation script including compilation
 #
 
 pkgname=alsaequal
 pkgver=0.6
 pkgrel=2
+declare -a depends=('caps' 'libasound2-dev')
 
-#Dependencies for mongoose
-aptitude install caps libasound2-dev
+echo "Installing $pkgname"
+
+#Dependencies
+for deppkg in "${depends[@]}"
+do
+    PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $deppkg|grep "install ok installed")
+    echo Checking for package: $deppkg
+    if [ "" == "$PKG_OK" ]; then
+        echo Installing package: $deppkg
+        sptitude install $deppkg
+    else
+        echo Package already installed: $deppkg
+    fi
+done
 
 cd /tmp
 
@@ -35,7 +48,8 @@ sed 's/module = "Eq"/module = "Eq10"/' -i pcm_equal.c
 make
 install -dm755 "/usr/lib/alsa-lib"
 make install
-cp /usr/lib/alsa-lib/*so /usr/lib/arm-linux-gnueabihf/alsa-lib
+install -m 755 libasound_module_pcm_equal.so /usr/lib/arm-linux-gnueabihf/alsa-lib/libasound_module_pcm_equal.so
+install -m 755 libasound_module_ctl_equal.so /usr/lib/arm-linux-gnueabihf/alsa-lib/libasound_module_ctl_equal.so
 
 #Cleanup
 cd /tmp

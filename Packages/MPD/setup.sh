@@ -10,9 +10,22 @@
 pkgname=mpd
 pkgver=1.2.3
 pkgrel=1
+declare -a depends=("mpd" "mpc")
+
+echo "Installing $pkgname"
 
 #Dependencies
-aptitude install mpd mpc
+for deppkg in "${depends[@]}"
+do
+    PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $deppkg|grep "install ok installed")
+    echo Checking for package: $deppkg
+    if [ "" == "$PKG_OK" ]; then
+        echo Installing package: $deppkg
+        sptitude install $deppkg
+    else
+        echo Package already installed: $deppkg
+    fi
+done
 
 cd /tmp
 
@@ -23,8 +36,11 @@ wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/M
 install -Dm644  mpd.conf /etc/mpd.conf
 
 #Enable and start the service
-systemctl restart mpd.service
+systemctl enable mpd.service
+systemctl start mpd.service
 systemctl status mpd.service
+
+sleep 5
 
 #Update the database
 mpc update

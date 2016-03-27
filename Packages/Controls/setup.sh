@@ -4,15 +4,18 @@
 ## This is the full installation script including compilation
 #
 ## This installs 2 packages
-## One to control a rotary encoder for volume control thanks to iqaudio
-## http://www.iqaudio.co.uk
-## The other is a program to receive input from a switch
-## C program written by Chris Yarnold
+##     A rotary encoder for volume control thanks to iqaudio
+##     http://www.iqaudio.co.uk
+##
+##     A program to receive input from a switch
+##     C program written by Chris Yarnold
 
 pkgname=controls
 pkgver=1.0
 pkgrel=1
 declare -a depends=("wiringpi")
+
+echo "Installing $pkgname"
 
 #Dependencies
 for deppkg in "${depends[@]}"

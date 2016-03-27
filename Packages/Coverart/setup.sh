@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-## Controls
-## This is the full installation script including compilation
+## Coverart
+## This is the full installation script
 #
 ## This installs a number of files to show coverart and other backgrounds
 ## while MPD plays music files
@@ -10,6 +10,8 @@ pkgname=coverart
 pkgver=1.0
 pkgrel=1
 declare -a depends=('x11-xserver-utils' 'gxmessage' 'imagemagick')
+
+echo "Installing $pkgname"
 
 #Dependencies
 for deppkg in "${depends[@]}"

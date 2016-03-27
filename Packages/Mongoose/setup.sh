@@ -7,14 +7,27 @@
 pkgname=mongoose
 pkgver=5.5
 pkgrel=2
+declare -a depends=("libssl-dev")
 
-if [ $# -gt 0 ]
+echo "Installing $pkgname"
+
+#Dependencies
+for deppkg in "${depends[@]}"
+do
+    PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $deppkg|grep "install ok installed")
+    echo Checking for package: $deppkg
+    if [ "" == "$PKG_OK" ]; then
+        echo Installing package: $deppkg
+        sptitude install $deppkg
+    else
+        echo Package already installed: $deppkg
+    fi
+done
+
+[ $# -gt 0 ]
 then
     instopt="$1"
 fi
-
-#Dependencies for mongoose
-aptitude install libssl-dev
 
 cd /tmp
 

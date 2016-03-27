@@ -1,3 +1,19 @@
+#!/bin/bash
+#
+## Mausberry Car Power Controller
+## This is the full installation script
+#
+## This installs a script to control the raspberry pi connected to 
+## the Mausberry car power controller
+
+pkgname=mausberry
+pkgver=1.0
+pkgrel=1
+
+echo "Installing $pkgname"
+
+mkdir /usr/bin/mausberry
+
 echo '#!/bin/bash
 
 #this is the GPIO pin connected to the lead on switch labeled OUT
@@ -18,6 +34,6 @@ sleep 1
 else
 sudo poweroff
 fi
-done' > /etc/switch.sh
-sudo chmod 777 /etc/switch.sh
-sudo sed -i '$ i /etc/switch.sh &' /etc/rc.local
+done' > /usr/bin/mausberry/switch.sh
+sudo chmod 777 /usr/bin/mausberry/switch.sh
+sudo sed -i '$ i /usr/bin/mausberry/switch.sh &' /etc/rc.local

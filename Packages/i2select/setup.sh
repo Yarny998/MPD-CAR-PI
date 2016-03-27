@@ -12,6 +12,8 @@ pkgname=i2select
 pkgver=1
 pkgrel=1
 
+echo "Installing $pkgname"
+
 cd /tmp
 
 mkdir -p $pkgdir/opt/i2select/
@@ -20,8 +22,6 @@ mkdir -p $pkgdir/opt/i2select/
 wget https://raw.githubusercontent.com/archphile/packages/master/i2select/i2select -O /usr/bin/i2select
 wget https://raw.githubusercontent.com/archphile/packages/master/i2select/unmute.orig -O /opt/i2select/unmute.orig
 wget https://raw.githubusercontent.com/archphile/packages/master/i2select/unmute.berryplus -O /opt/i2select/unmute.berryplus 
-#wget https://raw.githubusercontent.com/archphile/packages/master/i2select/mpd.conf.i2s -O /opt/i2select/mpd.conf.i2s
-#wget https://raw.githubusercontent.com/archphile/packages/master/i2select/mpd.conf.orig -O /opt/i2select/mpd.conf.orig
 wget https://raw.githubusercontent.com/archphile/packages/master/i2select/config.txt.orig -O /opt/i2select/config.txt.orig
 
 #For now, we will use the MPD conf for this project.
