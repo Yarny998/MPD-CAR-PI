@@ -9,6 +9,12 @@ When MPD is paused, a pause background is used.
 
 A popup shows the playing song info every now and then.
 
+Also installs LXDE
+    Xorg Display Server - xinit
+    Lightweight X11 Desktop Environment (LXDE) and Openbox Window Manager - lxde-core lxterminal lxappearance
+    LightDM Login Manager - lightdm
+    X browser - iceweasel
+
 Install
     copy down the setup.sh file
         wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Coverart/setup.sh
