@@ -13,4 +13,9 @@ If worst comes to worst, there is a clean fresh install mpd.conf in the repo cal
 
 Modify the Music Directory for you own needs
 
-
+Install
+    copy down the setup.sh file
+        wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/MPD/setup.sh
+    
+    run setup
+        ./setup.sh
