@@ -5,10 +5,6 @@ Jessie Lite
 Alsaequal
 IQAudio DAC+
 
-copy down the mpd.sh file
-run with no options to simply use this conf
-MPD and MPC will be installed as standard packages
-
 NOTE This configuration file is very specific to this build, particularly the sound setup 
 around alsaequal. You will most likely not get any sound with this configuration without also 
 installing the alsaequal part as well.
@@ -16,3 +12,5 @@ installing the alsaequal part as well.
 If worst comes to worst, there is a clean fresh install mpd.conf in the repo called mpd.conf.std
 
 Modify the Music Directory for you own needs
+
+
