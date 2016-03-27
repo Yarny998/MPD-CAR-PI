@@ -1,0 +1,10 @@
+Scrobbler
+
+MPDScribble page
+https://aur.archlinux.org/packages/mpdscribble/
+
+Hash your password to Last.FM
+
+Once finished installing, you must add your last.fm user and password to /etc/mpdscribble
+
+    echo -n "password" | md5sum | cut -f 1 -d " "
