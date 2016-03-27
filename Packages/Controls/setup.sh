@@ -32,10 +32,10 @@ mkdir $pkgname
 cd $pkgname
 
 #Get the main install base and compile
-wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Buttons/buttons.c
-wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Buttons/buttons.conf
-wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Buttons/buttons.service
-wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/iqaudio/IQ_rot.service
+wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Controls/buttons.c
+wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Controls/buttons.conf
+wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Controls/buttons.service
+wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Controls/IQAudio/IQ_rot.service
 wget https://raw.githubusercontent.com/iqaudio/tools/master/IQ_rot.c
 
 #Compile
