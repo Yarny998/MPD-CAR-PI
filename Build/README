@@ -22,12 +22,12 @@ Expand the partition size
         If this is the case, start the new partition 1 sector after the end of the remaining partition.
     Double check and write the partition
     Reboot
-Confirm the new partition name
-    fdisk –l
-Resize (using the new partition)
-    resize2fs /dev/mmcblk0p2
-Check New Size
-    df –h
+    Confirm the new partition name
+      fdisk –l
+    Resize (using the new partition)
+      resize2fs /dev/mmcblk0p2
+    Check New Size
+      df –h
 
 Change Networking and Setup WLAN
     http://raspberrypi.stackexchange.com/questions/11631/how-to-setup-multiple-wifi-networks
