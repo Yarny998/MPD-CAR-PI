@@ -1,0 +1,17 @@
+This copies in a number of hidef backgrounds designed for a 1920x1200 screen
+
+When MPD is playing and there is good albumart, the album art will be set as the background
+If there is no albumart, random selections of the hidef backgrounds are used. These are rotated.
+
+When MPD is not playing, the hidef backgrounds are rotated.
+
+When MPD is paused, a pause background is used.
+
+A popup shows the playing song info every now and then.
+
+Install
+    copy down the setup.sh file
+        wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Coverart/setup.sh
+    
+    run setup
+        ./setup.sh
