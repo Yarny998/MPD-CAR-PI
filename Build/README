@@ -1,0 +1,70 @@
+Base Raspbian Jessie-Lite Build
+    https://www.raspberrypi.org/downloads/raspbian/
+
+Login and set a Root Password
+    Login as “pi”
+    sudo su
+    passwd
+
+Setup Remote Login and SSH
+    sed '/LoginGraceTime 120/c#LoginGraceTime 120' -i /etc/ssh/sshd_config
+    sed '/PermitRootLogin without-password/cPermitRootLogin yes' -i /etc/ssh/sshd_config
+    sed '/StrictModes yes/c#StrictModes yes' -i /etc/ssh/sshd_config
+
+(reboot required before this will change)
+	
+Expand the partition size
+    https://www.raspberrypi.org/forums/viewtopic.php?f=56&t=112253
+
+    Delete the partition root is currently running on with fdisk
+    Create a new partition using all defaults, but check the end of the remaining partition
+        If the image was not written to the start of the card, it may pick up a very small partition.
+        If this is the case, start the new partition 1 sector after the end of the remaining partition.
+    Double check and write the partition
+    Reboot
+Confirm the new partition name
+    fdisk –l
+Resize (using the new partition)
+    resize2fs /dev/mmcblk0p2
+Check New Size
+    df –h
+
+Change Networking and Setup WLAN
+    http://raspberrypi.stackexchange.com/questions/11631/how-to-setup-multiple-wifi-networks
+
+    wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Build/wpa_supplicant.conf -O /etc/wpa_supplicant/wpa_supplicant.conf
+
+    Hash SSID Passphrase
+      wpa_passphrase myssid my_very_secret_passphrase
+
+    Change SSID and Passphrase in wpa_supplicant from wpa_passphrase above
+
+    Then set up /etc/network/interfaces
+      wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Build/interfaces -O /etc/network/interfaces
+
+    Update the IPAddress etc
+
+Download main install script
+    login as root
+    wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Build/setup.sh
+    ./setup.sh
+
+Install Remaining Packages In Order
+    Player setup
+      MPD
+    IQAudio DAC Setup
+      i2select
+    Equaliser (Optional, but Recommended)
+      Alsaequal
+    Button and Volume Controls If Applicable
+      Controls
+    Webserver to Share Coverart
+      Mongoose
+    Remote Web Control
+      YMPD
+    Scrobbler (LastFM)
+      MPDScribble
+    X Environment and Coverart on Screen
+      coverart
+    If using a Mausberry Power Adapter in Vehicle
+      Mausberry
