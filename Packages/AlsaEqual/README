@@ -1,0 +1,10 @@
+AlsaEqual
+
+Select equalizer values
+Modify the equalizer as the MPD user. This must be done as MPD as this is the user playing files
+This will update the file /var/lib/mpd/.alsaequal.bin (this is MPD home folder) realtime
+Note it is modifying the equal device from asound.conf
+
+sudo -u mpd alsamixer -D equal
+
+You can copy the file and make new ones if you like, then swap them in and out
