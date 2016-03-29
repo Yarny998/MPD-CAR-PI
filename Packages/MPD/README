@@ -15,7 +15,8 @@ Modify the Music Directory for you own needs
 
 Install
     copy down the setup.sh file
-        wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/MPD/setup.sh
-    
+        wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/MPD/setup.sh
+
     run setup
+        chmod 755 setup.sh
         ./setup.sh
