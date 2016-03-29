@@ -4,4 +4,7 @@ Raspberry Pi 2
 Jessie Lite
 
 copy down the ympd.sh file
+    wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/YMPD/setup.sh
 run as root with no options
+    chmod 755 setup.sh
+    ./setup.sh
