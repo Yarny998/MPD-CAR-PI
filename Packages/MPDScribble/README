@@ -12,3 +12,11 @@ Hash your password to Last.FM
 Check LAST.FM
     You should see songs being added to your LastFm account once played. 
     They need to be played completely for a full scrobble entry to be made.
+
+Install
+    copy down the setup.sh file
+        wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/MPDScribble/setup.sh
+
+    run setup
+        chmod 755 setup.sh
+        ./setup.sh
