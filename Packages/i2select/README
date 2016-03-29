@@ -15,7 +15,7 @@ I2Select helps setup some options for different audio cards attached to the Rasp
 The mpd.conf is ignored from i2select however. This is a specific setup from this project so is not used.
 
 copy down the i2select.sh file
-    wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/i2select/setup.sh
+    wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/i2select/setup.sh
     
 run as root with no options
     chmod 755 setup.sh
