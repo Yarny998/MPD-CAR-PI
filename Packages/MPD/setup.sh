@@ -21,7 +21,7 @@ do
     echo Checking for package: $deppkg
     if [ "" == "$PKG_OK" ]; then
         echo Installing package: $deppkg
-        sptitude install $deppkg
+        aptitude install $deppkg
     else
         echo Package already installed: $deppkg
     fi
