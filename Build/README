@@ -47,6 +47,7 @@ Change Networking and Setup WLAN
 Download main install script
     login as root
     wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Build/setup.sh
+    chmod 755 setup.sh
     ./setup.sh
 
 Install Remaining Packages In Order
