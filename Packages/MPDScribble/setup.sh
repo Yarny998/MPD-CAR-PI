@@ -38,6 +38,8 @@ tar -xf mpdscribble-0.22.tar.bz2
 cd mpdscribble-0.22
 
 # Compile and install
+mkdir /var/lib/mpd/mpdscribble
+mkdir /var/log/mpdscribble
 ./configure --sysconfdir=/etc --enable-debug
 make install
 
