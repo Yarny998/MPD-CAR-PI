@@ -42,7 +42,11 @@ cd mpdscribble-0.22
 make install
 
 # Install and start the service
+wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/MPDScribble/mpdscribble.conf
+wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/MPDScribble/mpdscribble.service
 
+install -D -m644 mpdscribble.conf /etc/mpdscribble.conf
+install -D -m755 mpdscribble.service /etc/systemd/system/mpdscribble.service
 systemctl enable mpdscribble.service
 systemctl start mpdscribble.service
 
