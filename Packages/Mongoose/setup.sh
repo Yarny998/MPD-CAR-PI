@@ -24,7 +24,7 @@ do
     fi
 done
 
-[ $# -gt 0 ]
+if [ $# -gt 0 ]
 then
     instopt="$1"
 fi
