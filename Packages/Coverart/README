@@ -17,7 +17,8 @@ Also installs LXDE
 
 Install
     copy down the setup.sh file
-        wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Coverart/setup.sh
+        wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Coverart/setup.sh
     
     run setup
+        chmod 755 setup.sh
         ./setup.sh
