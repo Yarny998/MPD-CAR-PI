@@ -6,8 +6,9 @@ Cover Art For Remote Players
 
 Install
     copy down the setup.sh file
-        wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Mongoose/setup.sh
-    
+        wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Mongoose/setup.sh
+        chmod 755 setup.sh
+        
     run with -full to also grab mongoose 5.5 tar and compile
         ./setup.sh -full
         
