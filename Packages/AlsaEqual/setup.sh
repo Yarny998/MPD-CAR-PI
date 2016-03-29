@@ -58,15 +58,12 @@ rm -r $pkgname
 
 #Get the config file and service file
 wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/AlsaEqual/asound.conf
-wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/AlsaEqual/.alsaequal.bin.1
 
 # Install files
 install -D -m644 asound.conf "/etc/asound.conf"
-install -D -m644 .alsaequal.bin.1 "/var/lib/mpd/.alsaequal.bin.1"
 
 #make a copy of the standard settings
 cp /var/lib/mpd/.alsaequal.bin /var/lib/mpd/.alsaequal.bin.std
 
 #Cleanup
 rm asound.conf
-rm .alsaequal.bin.1
