@@ -39,10 +39,11 @@ wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/C
 wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Coverart/art.tar
 
 # Install files
-install -D -m755 -o=mpd -g=audio coverart.sh /var/lib/mpd/coverart.sh
-install -D -m755 -o=mpd -g=audio YMPD /var/lib/mpd/Desktop/YMPD
-install -D -m644 -o=mpd -g=audio autostart /var/lib/mpd/.config/lxsession/LXDE/autostart
-tar -xf art.tar /var/lib/mpd
+install -D -m755 -o mpd -g audio coverart.sh /var/lib/mpd/coverart.sh
+install -D -m755 -o mpd -g audio YMPD /var/lib/mpd/Desktop/YMPD
+install -D -m644 -o mpd -g audio autostart /var/lib/mpd/.config/lxsession/LXDE/autostart
+cd /var/lib/mpd
+tar -xf /tmp/$pkgname/art.tar
 
 # Setting graphical.target as the new default target
 if command -v systemctl > /dev/null && systemctl | grep -q '\-\.mount'; then
