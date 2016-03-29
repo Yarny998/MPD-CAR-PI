@@ -53,16 +53,17 @@ Download main install script
 Install Remaining Packages In Order
     Player setup
       MPD
-    IQAudio DAC Setup
-      i2select
-    Equaliser (Optional, but Recommended)
-      Alsaequal
-    Button and Volume Controls If Applicable
-      Controls
     Webserver to Share Coverart
       Mongoose
     Remote Web Control
       YMPD
+    IQAudio DAC Setup
+      i2select
+    Equaliser (Optional, but Recommended)
+      Alsaequal
+** Assuming all hardware setup is the same, you should be able to test through YMPD and get sound at this point
+    Button and Volume Controls If Applicable
+      Controls
     Scrobbler (LastFM)
       MPDScribble
     X Environment and Coverart on Screen
