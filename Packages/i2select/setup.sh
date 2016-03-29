@@ -21,7 +21,7 @@ mkdir -p $pkgdir/opt/i2select/
 #Get the main files
 wget https://raw.githubusercontent.com/archphile/packages/master/i2select/i2select -O /usr/bin/i2select
 wget https://raw.githubusercontent.com/archphile/packages/master/i2select/unmute.orig -O /opt/i2select/unmute.orig
-wget https://raw.githubusercontent.com/archphile/packages/master/i2select/unmute.berryplus -O /opt/i2select/unmute.berryplus 
+wget https://raw.githubusercontent.com/archphile/packages/master/i2select/unmute.boost -O /opt/i2select/unmute.boost
 wget https://raw.githubusercontent.com/archphile/packages/master/i2select/config.txt.orig -O /opt/i2select/config.txt.orig
 
 #For now, we will use the MPD conf for this project.
@@ -29,6 +29,7 @@ wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/M
 cp /opt/i2select/mpd.conf.i2s /opt/i2select/mpd.conf.orig
 
 chmod +x "$pkgdir"/usr/bin/i2select
-chmod +x "$pkgdir"/opt/i2select/unmute.berryplus
+chmod +x "$pkgdir"/opt/i2select/unmute.boost
+chmod +x "$pkgdir"/opt/i2select/unmute.orig
 
 /usr/bin/i2select
