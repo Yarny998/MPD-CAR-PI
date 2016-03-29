@@ -3,7 +3,8 @@ Installation of MPD onto Jesse Lite
 
 This is a CARPI focused build. This will control media in my van.
 
-My setup is based around a 10inch LCD screen (1920x1080), Raspberry Pi and an IQAudio DAC+
+My setup is based around a 10inch LCD screen (1920x1080), Raspberry Pi2 and an IQAudio DAC+
+
 From power to playing music is about 15 seconds with a Pi2, although I will be looking at a Pi3 shortly.
 The gui is a little slower, around 30 seconds from poweron to displaying.
 
