@@ -11,7 +11,7 @@
 pkgname=coverart
 pkgver=1.0
 pkgrel=1
-declare -a depends=('xinit' 'lxde-core' 'lxterminal' 'lxappearance' 'lightdm' 'iceweasel' 'x11-xserver-utils' 'gxmessage' 'imagemagick')
+declare -a depends=('xinit' 'lxde-core' 'lxterminal' 'lxappearance' 'lightdm' 'iceweasel' 'x11-xserver-utils' 'gxmessage' 'imagemagick' 'feh')
 
 echo "Installing $pkgname"
 
