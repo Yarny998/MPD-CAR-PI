@@ -4,7 +4,7 @@ After=mpd.service
 
 [Service]
 PIDFile=/run/buttons.pid
-ExecStart=/usr/bin/buttons/buttons
+ExecStart=/usr/bin/controls/buttons
 Restart=always
 
 [Install]
