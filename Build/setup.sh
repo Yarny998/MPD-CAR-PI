@@ -1,5 +1,5 @@
 #!/bin/bash
-######################Archphile Creation Script for Raspberry Pi 2############################
+###################### Creation Script for Raspberry Pi 2 ############################
 clear
 red='\e[0;31m'
 NC='\e[0m'
@@ -68,54 +68,63 @@ sed 's/FS_MOUNTOPTIONS=""/FS_MOUNTOPTIONS="-fstype=vfat,flush,gid=plugdev,dmask=
 #
 ## MPD and MPC
 #
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/MPD/setup.sh
-# ./setup.sh
-
-#
-## i2select
-#
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/i2select/setup.sh
-# ./setup.sh
-
-#
-## alsaequal
-#
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/AlsaEqual/setup.sh
-# ./setup.sh
-
-#
-## controls
-#
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Controls/setup.sh
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/MPD/setup.sh
+# chmod 755 setup.sh
 # ./setup.sh
 
 #
 ## Mongoose
 #
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Mongoose/setup.sh
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Mongoose/setup.sh
+# chmod 755 setup.sh
 # ./setup.sh -full
 
 #
 ## ympd
 #
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/YMPD/setup.sh
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/YMPD/setup.sh
+# chmod 755 setup.sh
+# ./setup.sh
+
+#
+## i2select
+#
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/i2select/setup.sh
+# chmod 755 setup.sh
+# ./setup.sh
+
+#
+## alsaequal
+#
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/AlsaEqual/setup.sh
+# chmod 755 setup.sh
+# ./setup.sh
+
+#
+## controls
+#
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Controls/setup.sh
+# chmod 755 setup.sh
 # ./setup.sh
 
 #
 ## mpdscribble
 #
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/MPDScribble/setup.sh
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/MPDScribble/setup.sh
+# chmod 755 setup.sh
 # ./setup.sh
 
 #
 ## coverart
 #
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Coverart/setup.sh
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Coverart/setup.sh
+# chmod 755 setup.sh
 # ./setup.sh
 
 #
 ## mausberry
 #
-# wget https://github.com/Yarny998/MPD-Jesse-Lite/tree/master/Packages/Mausberry/setup.sh
+# wget https://raw.githubusercontent.com/Yarny998/MPD-Jesse-Lite/master/Packages/Mausberry/setup.sh
+# chmod 755 setup.sh
 # ./setup.sh
  
