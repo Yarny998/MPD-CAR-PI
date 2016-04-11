@@ -1,0 +1,28 @@
+This is a setup for a 4 wire touchscreen with a controller such as the AR1100. Instructions are found at the site below:
+http://engineering-diy.blogspot.com.au/2013/01/adding-7inch-display-with-touchscreen.html
+
+Once the touchscreen is connected and setup.sh has been run, run the Xinput_calibrator program in an x-window.
+This will give specific output for the screen.
+
+Eg
+Section "InputClass"
+    Identifier    "calibration"
+    MatchProduct    "eGalax Inc. USB TouchController"
+    Option    "Calibration"    "121 1917 317 1741"
+    Option    "SwapAxes"    "1"
+EndSection
+
+cd /usr/share/X11/xorg.conf.d
+check a similar device is not listed in other files, as this will confuse the system
+
+Copy section above into /usr/share/X11/xorg.conf.d/01-input.conf
+    vi /usr/share/X11/xorg.conf.d/01-input.conf
+    paste in section
+
+You may also find it helpful to add 3rd button emulation
+
+In the same file above, paste in 
+    Option "EmulateThirdButton" "1"
+    Option "EmulateThirdButtonTimeout" "750"
+    Option "EmulateThirdButtonMoveThreshold" "30"
+
